@@ -12,9 +12,8 @@ router
   .get('/', (req, res) => {
     res.render(path.join(__dirname, '/public/index.pug'))
   })
-  //post file for details
+  //post file for details and rm file.
   .post('/fileData', upload.single('upload'), (req, res, next) => {
-    console.log(req.file);
     res.json({fileName: req.file.originalname, fileSize: req.file.size});
     fs.unlink(path.join(__dirname, req.file.path));
   });
