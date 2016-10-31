@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+	head
+		link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+		script(src="/public/index.js")
+		title File API
+		
+.container
+	h1 File Metadata Microservice
+	h4 This is an api for uploading a file to a server, checking its file size and responding with a json respnose. Simple practice project by Andrew VanVlack
+	
+	H3 Demo Input
+	form(class="form-inline")
+		label(for='fileUpload' class) Select file to analize:
+		input(type='file' name="fileUpload" class="form-control" id="fileSelect")
+		button(class="btn btn-primary" id ="fileSubmit") Submit
+		
+
+	H3 Inputs Method
+	ol
+		li: |Post to server
+	H3 Example Output
+	pre: code.
+		{
+			unix: 605088000,
+			natural: "March 5, 1989"
+		}
+
+	h4.text-center Node.js source code avaleable on 
+		a(href="http://") github
