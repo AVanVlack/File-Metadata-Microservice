@@ -14,6 +14,7 @@ router
   })
   //post file for details and rm file.
   .post('/fileData', upload.single('upload'), (req, res, next) => {
+    if(!req.files){return next(new Error("No file sent"))};
     res.json({fileName: req.file.originalname, fileSize: req.file.size});
     fs.unlink(path.join(__dirname, req.file.path));
   });
