@@ -1,6 +1,6 @@
 # File Metadata Microservice
 
-A simple microservice provides a details of a file uploaded to the server. This is a simple backend practice project.
+A simple microservice provides details of a file uploaded to the server. This is a simple backend practice project.
 
 Running example on [heroku](https://vanvlack-filemetadata.herokuapp.com/).
 
